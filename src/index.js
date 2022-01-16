@@ -1,6 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import App from './App';
 
-// eslint-disable-next-line react/jsx-filename-extension
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(
+  <BrowserRouter>
+    <Routes>
+      <Route index element={<App />} />
+      <Route path="/search" element={<App />} />
+    </Routes>
+  </BrowserRouter>,
+  document.getElementById('root'),
+);
