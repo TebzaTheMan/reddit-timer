@@ -7,7 +7,12 @@
   },
   "parser": "@babel/eslint-parser",
   "parserOptions": {
-   "requireConfigFile": false
+   "requireConfigFile": false,
+    "babelOptions": {
+      "presets": [
+        "@babel/preset-react"
+      ]
+    },
   },
   "extends": ["airbnb"],
   "plugins": ["cypress", "react-hooks"],
