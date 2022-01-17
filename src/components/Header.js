@@ -1,14 +1,15 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { StyledHeader } from '../styles/Header.styled';
 
 export default function Header() {
   return (
     <StyledHeader>
-      <img src="./images/logo.svg" alt="" />
+      <Link to="/"><img src="./images/logo.svg" alt="" /></Link>
       <nav>
         <ul>
           <li>
-            <a href="#search">Search</a>
+            <Link to="/search/javascript">Search</Link>
           </li>
           <li>
             <a href="#how-it-works">How it works</a>
