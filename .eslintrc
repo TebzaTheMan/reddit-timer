@@ -5,7 +5,15 @@
     "es6": true,
     "cypress/globals": true
   },
-  "parser": "babel-eslint",
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+   "requireConfigFile": false,
+    "babelOptions": {
+      "presets": [
+        "@babel/preset-react"
+      ]
+    },
+  },
   "extends": ["airbnb"],
   "plugins": ["cypress", "react-hooks"],
   "rules": {
