@@ -9,7 +9,9 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-router-dom": "6",
-    "react-scripts": "^5.0.0"
+    "react-scripts": "^5.0.0",
+    "styled-components": "^5.3.3",
+    "styled-normalize": "^8.0.7"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -22,7 +24,7 @@
     "cypress:open": "cross-env TZ=Europe/Berlin npx cypress open",
     "prepare": "husky install"
   },
-   "resolutions": {
+  "resolutions": {
     "mini-css-extract-plugin": "2.4.5"
   },
   "browserslist": {
