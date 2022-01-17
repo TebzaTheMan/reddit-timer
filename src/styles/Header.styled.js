@@ -14,5 +14,9 @@ export const StyledHeader = styled.header`
     }
     a{
         text-decoration: none;
+        color: ${({ theme }) => theme.colors.gray}
+    }
+    a:hover{
+        color:${({ theme }) => theme.colors.accent} ;
     }
 `;
