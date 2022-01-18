@@ -12,10 +12,10 @@ export default function Header() {
             <Link to="/search/javascript">Search</Link>
           </li>
           <li>
-            <a href="#how-it-works">How it works</a>
+            <a href="/#how-it-works">How it works</a>
           </li>
           <li>
-            <a href="#about">About</a>
+            <a href="/#about">About</a>
           </li>
         </ul>
       </nav>
