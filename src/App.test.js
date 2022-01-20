@@ -1,7 +1,23 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
+import { MemoryRouter } from 'react-router-dom';
 import App from './App';
 
-test('renders App', () => {
-  render(<App />);
+describe('Header', () => {
+  test.each`
+ link | hash
+  ${'logo'} | ${'/'}
+  ${'Search'} | ${'/search/javascript'}
+  ${'About'} | ${'/#about'}
+  ${'How it works'} | ${'/#how-it-works'}
+
+`('"$link" points to $hash', ({ link, hash }) => {
+    render(
+      <MemoryRouter>
+        <App />
+      </MemoryRouter>,
+    );
+    const hashLink = screen.getByRole('link', { name: new RegExp(link, 'i') });
+    expect(hashLink).toHaveAttribute('href', hash);
+  });
 });
