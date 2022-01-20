@@ -7,5 +7,11 @@ const Theme = {
     gray: '#636363',
     lightGray: '#93918F',
   },
+  breakpoints: {
+    mobile: '30em',
+    tablet: '48em',
+    laptop: '62em',
+    desktop: '80em',
+  },
 };
 export default Theme;
