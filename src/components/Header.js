@@ -5,7 +5,7 @@ import { StyledHeader } from '../styles/Header.styled';
 export default function Header() {
   return (
     <StyledHeader>
-      <Link to="/"><img src="./images/logo.svg" alt="" /></Link>
+      <Link to="/"><img src="./images/logo.svg" alt="logo" /></Link>
       <nav>
         <ul>
           <li>
