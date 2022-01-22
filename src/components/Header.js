@@ -13,10 +13,10 @@ export default function Header() {
             <NavLink to={`/search/${DEFAULTSUBREDDIT}`}>Search</NavLink>
           </li>
           <li>
-            <NavLink to="/#how-it-works">How it works</NavLink>
+            <NavLink as="a" href="/#how-it-works">How it works</NavLink>
           </li>
           <li>
-            <NavLink to="/#about">About</NavLink>
+            <NavLink as="a" href="/#about">About</NavLink>
           </li>
         </ul>
       </nav>
