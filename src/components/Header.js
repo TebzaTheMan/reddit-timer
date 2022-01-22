@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { DEFAULTSUBREDDIT } from '../constants';
 import { StyledHeader } from '../styles/Header.styled';
 
 export default function Header() {
@@ -9,7 +10,7 @@ export default function Header() {
       <nav>
         <ul>
           <li>
-            <Link to="/search/javascript">Search</Link>
+            <Link to={`/search/${DEFAULTSUBREDDIT}`}>Search</Link>
           </li>
           <li>
             <a href="/#how-it-works">How it works</a>
