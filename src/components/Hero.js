@@ -1,4 +1,5 @@
 import React from 'react';
+import { DEFAULTSUBREDDIT } from '../constants';
 import {
   Button, DefaultSubreddit, HeroImg, StyledHero, Subtitle, Title,
 } from '../styles/Hero.styled';
@@ -11,8 +12,11 @@ export default function Hero() {
         Great timing, great results! Find the
         best time to post on your subreddit.
       </Subtitle>
-      <Button to="/search/javascript">SHOW ME THE BEST TIME</Button>
-      <DefaultSubreddit>r/javascript</DefaultSubreddit>
+      <Button to={`/search/${DEFAULTSUBREDDIT}`}>SHOW ME THE BEST TIME</Button>
+      <DefaultSubreddit>
+        r/
+        {`${DEFAULTSUBREDDIT}`}
+      </DefaultSubreddit>
       <HeroImg src="./images/table.png" alt="javascript table" />
     </StyledHero>
   );
