@@ -1,7 +1,9 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
-import App from '../App';
+import { ThemeProvider } from 'styled-components';
+import Footer from '../components/Footer';
+import Theme from '../styles/Theme';
 
 test.each`
  link | hash
@@ -12,7 +14,9 @@ test.each`
 `('"$link" points to $hash', ({ link, hash }) => {
   render(
     <MemoryRouter>
-      <App />
+      <ThemeProvider theme={Theme}>
+        <Footer />
+      </ThemeProvider>
     </MemoryRouter>,
   );
   const hashLink = screen.getByRole('link', { name: new RegExp(link, 'i') });
