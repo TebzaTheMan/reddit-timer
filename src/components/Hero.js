@@ -1,8 +1,9 @@
 import React from 'react';
 import { DEFAULTSUBREDDIT } from '../constants';
+import { Button } from '../styles/Global';
 import {
-  Button, DefaultSubreddit, HeroImg, StyledHero, Subtitle, Title,
-} from '../styles/Hero.styled';
+  DefaultSubreddit, HeroImg, StyledHero, Subtitle, Title,
+} from '../styles/Hero.elements';
 
 export default function Hero() {
   return (
