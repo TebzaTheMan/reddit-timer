@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link as RouterLink } from 'react-router-dom';
 import styled, { createGlobalStyle } from 'styled-components';
 import { normalize } from 'styled-normalize';
 
@@ -27,13 +27,11 @@ const GlobalStyles = createGlobalStyle`
     color: ${({ theme }) => theme.colors.lightGray};
     line-height:${({ theme }) => theme.fonts.letterSpacing.tall};
   }
-  a{
-    text-decoration: none;
-  }
 `;
-export const Button = styled(Link)`
+export const Button = styled(RouterLink)`
   font-size: ${({ theme }) => theme.fonts.size.smaller};
   line-height: ${({ theme }) => theme.fonts.lineHeight.shorter};
+  text-decoration: none;
   background-color: ${({ theme }) => theme.colors.accent};
   border: .1px ${({ theme }) => theme.colors.accent} solid; 
   border-radius: 4px;
@@ -44,6 +42,32 @@ export const Button = styled(Link)`
           background-color: white;
           color:${({ theme }) => theme.colors.accent};
   }
+`;
+
+export const SecHeading = styled.h2`
+    margin-bottom: ${({ mb }) => mb};
+    letter-spacing: ${({ theme }) => theme.fonts.letterSpacing.normal};
+`;
+
+export const List = styled.ul`
+        list-style-position: inside;
+        padding-left: 0;
+        margin: 0px;
+`;
+export const ListItem = styled.li`
+        color: ${({ theme }) => theme.colors.lightGray};
+        line-height:${({ theme }) => theme.fonts.lineHeight.taller};
+`;
+export const Link = styled(RouterLink)`
+        font-size: 1em;
+        text-decoration: none;
+        color: ${({ theme }) => theme.colors.gray};
+        &:hover{
+                color:${({ theme }) => theme.colors.accent} ;
+        }
+`;
+export const ExtLink = styled(Link).attrs({ as: 'a' })`
+        color: ${({ theme }) => theme.colors.link};
 `;
 
 export default GlobalStyles;

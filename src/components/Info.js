@@ -1,13 +1,16 @@
 import React from 'react';
 import {
-  About, ExtLink, Heading, HowItWorks, InfoSection, List, ListItem, Text,
+  List, ListItem, SecHeading, ExtLink,
+} from '../styles/Global';
+import {
+  About, HowItWorks, InfoSection, Text,
 } from '../styles/InfoSection.elements';
 
 export default function Info() {
   return (
     <InfoSection>
       <HowItWorks id="how-it-works">
-        <Heading mb="0.75rem">How it works</Heading>
+        <SecHeading mb="0.75rem">How it works</SecHeading>
         <List>
           <ListItem> We find the 500 top posts from the past year for a subreddit.</ListItem>
           <ListItem>
@@ -19,7 +22,7 @@ export default function Info() {
       </HowItWorks>
 
       <About id="about">
-        <Heading mb="0.813rem">About</Heading>
+        <SecHeading mb="0.813rem">About</SecHeading>
         <Text>
           This app was created during a course on
           {' '}

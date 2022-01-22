@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { Link } from './Global';
 import Media from './Media';
-// eslint-disable-next-line import/prefer-default-export
+
 export const StyledFooter = styled.footer`
     display: flex;
     justify-content: space-between;
@@ -13,13 +14,8 @@ export const StyledFooter = styled.footer`
     ${Media.laptop`
      padding: 0 15.625rem;
     `}
-    a{
-        text-decoration: none;
-        color: ${({ theme }) => theme.colors.gray};
+`;
+export const FooterLink = styled(Link)`
         font-size: 0.875rem;
         line-height: 1.067rem;
-    }
-    a:hover{
-        color:${({ theme }) => theme.colors.accent} ;
-    }
 `;
