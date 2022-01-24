@@ -15,7 +15,7 @@ export default function Header() {
   return (
     <header>
       <Nav>
-        <Link to="/"><NavLogo src="./images/logo.svg" alt="logo" /></Link>
+        <Link to="/"><NavLogo src="/images/logo.svg" alt="logo" /></Link>
         <MobileIcon onClick={handleClick}>
           {click ? <RiCloseFill /> : <RiMenu5Fill />}
         </MobileIcon>
