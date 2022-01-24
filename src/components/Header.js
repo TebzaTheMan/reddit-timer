@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { DEFAULTSUBREDDIT } from '../constants';
-import { StyledHeader } from '../styles/Header.styled';
+import { NavLink, StyledHeader } from '../styles/Header.elements';
 
 export default function Header() {
   return (
@@ -10,13 +10,13 @@ export default function Header() {
       <nav>
         <ul>
           <li>
-            <Link to={`/search/${DEFAULTSUBREDDIT}`}>Search</Link>
+            <NavLink to={`/search/${DEFAULTSUBREDDIT}`}>Search</NavLink>
           </li>
           <li>
-            <a href="/#how-it-works">How it works</a>
+            <NavLink as="a" href="/#how-it-works">How it works</NavLink>
           </li>
           <li>
-            <a href="/#about">About</a>
+            <NavLink as="a" href="/#about">About</NavLink>
           </li>
         </ul>
       </nav>

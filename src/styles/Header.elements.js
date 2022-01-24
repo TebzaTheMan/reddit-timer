@@ -1,6 +1,6 @@
 import styled from 'styled-components';
+import { Link } from './Global';
 
-// eslint-disable-next-line import/prefer-default-export
 export const StyledHeader = styled.header`
     display: flex;
     justify-content: space-between;
@@ -12,12 +12,8 @@ export const StyledHeader = styled.header`
         list-style-type: none;
         gap:1.563rem;
     }
-    a{
-        text-decoration: none;
-        color: ${({ theme }) => theme.colors.gray};
+`;
+
+export const NavLink = styled(Link)`
         line-height: 1.219rem;
-    }
-    a:hover{
-        color:${({ theme }) => theme.colors.accent} ;
-    }
 `;
