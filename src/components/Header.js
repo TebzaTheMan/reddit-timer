@@ -1,17 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { RiMenu5Fill, RiCloseFill } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
 import { DEFAULTSUBREDDIT } from '../constants';
 import {
   Nav,
-  NavItem, NavLink, NavLogo, NavMenu, StyledHeader,
+  NavLogo, NavMenu, NavItem, NavLink, MobileIcon,
 } from '../styles/Header.elements';
 
 export default function Header() {
+  const [click, setClick] = useState(false);
+  const handleClick = () => setClick(!click);
+  const closeMobileMenu = () => setClick(false);
+
   return (
-    <StyledHeader>
-      <Link to="/"><NavLogo src="./images/logo.svg" alt="logo" /></Link>
+    <header>
       <Nav>
-        <NavMenu>
+        <Link to="/"><NavLogo src="./images/logo.svg" alt="logo" /></Link>
+        <MobileIcon onClick={handleClick}>
+          {click ? <RiCloseFill /> : <RiMenu5Fill />}
+        </MobileIcon>
+        <NavMenu onClick={closeMobileMenu} click={click}>
           <NavItem>
             <NavLink to={`/search/${DEFAULTSUBREDDIT}`}>Search</NavLink>
           </NavItem>
@@ -23,6 +31,6 @@ export default function Header() {
           </NavItem>
         </NavMenu>
       </Nav>
-    </StyledHeader>
+    </header>
   );
 }
