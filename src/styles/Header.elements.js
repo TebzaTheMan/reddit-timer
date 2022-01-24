@@ -6,14 +6,21 @@ export const StyledHeader = styled.header`
     justify-content: space-between;
     padding: 1.64rem 5rem;
     align-items: center;
-    ul{
-        display:flex;
-        justify-content: space-between;
-        list-style-type: none;
-        gap:1.563rem;
-    }
 `;
+export const Nav = styled.nav`
+`;
+export const NavMenu = styled.ul`
+    display:flex;
+    justify-content: space-between;
+    list-style-type: none;
+    gap:1.563rem;
+`;
+export const NavItem = styled.li`
 
+`;
 export const NavLink = styled(Link)`
         line-height: 1.219rem;
+`;
+
+export const NavLogo = styled.img`
 `;
