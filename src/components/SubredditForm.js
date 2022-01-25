@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import {
-  useParams,
+  useParams, useNavigate,
 } from 'react-router-dom';
 import { Button } from '../styles/Global';
 import { Subtitle } from '../styles/Hero.elements';
@@ -9,6 +9,7 @@ import { Input, SubredditForm as SubForm } from '../styles/Search.elements';
 export default function SubredditForm() {
   const { subreddit: defaultSubreddit } = useParams();
   const [subreddit, setSubreddit] = useState(defaultSubreddit);
+  const navigate = useNavigate();
 
   useEffect(() => {
     setSubreddit(defaultSubreddit);
@@ -17,8 +18,12 @@ export default function SubredditForm() {
   const handleChange = (e) => {
     setSubreddit(e.target.value);
   };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    navigate(`/search/${subreddit}`);
+  };
   return (
-    <SubForm>
+    <SubForm name="subreddit-form" data-testid="subreddit-form">
       <Subtitle>
         r /
       </Subtitle>
@@ -28,10 +33,9 @@ export default function SubredditForm() {
         value={subreddit}
         onChange={handleChange}
         name="subreddit"
-        id="subreddit"
-        htmlFor="subreddit"
+        data-testid="subreddit-input"
       />
-      <Button to={`/search/${subreddit}`}>SEARCH</Button>
+      <Button as="button" onClick={handleSubmit}>SEARCH</Button>
     </SubForm>
   );
 }

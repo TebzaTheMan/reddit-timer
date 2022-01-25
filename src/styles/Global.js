@@ -37,6 +37,7 @@ export const Button = styled(RouterLink)`
   border-radius: 4px;
   color:  ${({ theme }) => theme.colors.white};
   padding: 0.844rem 0.927rem 0.844rem 0.948rem;
+  cursor:pointer;
    --mb : ${(props) => props.mb};
   margin-bottom:var(--mb,0) ;
   &:hover{
