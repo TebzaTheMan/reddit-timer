@@ -72,4 +72,7 @@ export const ExtLink = styled(Link).attrs({ as: 'a' })`
         color: ${({ theme }) => theme.colors.link};
 `;
 
+export const ContentContainer = styled.main`
+  min-height:  calc(100vh - 200px);
+`;
 export default GlobalStyles;
