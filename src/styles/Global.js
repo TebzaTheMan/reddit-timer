@@ -37,7 +37,9 @@ export const Button = styled(RouterLink)`
   border-radius: 4px;
   color:  ${({ theme }) => theme.colors.white};
   padding: 0.844rem 0.927rem 0.844rem 0.948rem;
-  margin-bottom: 2.875rem;
+  cursor:pointer;
+   --mb : ${(props) => props.mb};
+  margin-bottom:var(--mb,0) ;
   &:hover{
           background-color: white;
           color:${({ theme }) => theme.colors.accent};
@@ -70,4 +72,7 @@ export const ExtLink = styled(Link).attrs({ as: 'a' })`
         color: ${({ theme }) => theme.colors.link};
 `;
 
+export const ContentContainer = styled.main`
+  min-height:  calc(100vh - 200px);
+`;
 export default GlobalStyles;

@@ -12,7 +12,9 @@ export const Title = styled.h1`
         margin-bottom: 1.25rem;
 `;
 export const Subtitle = styled.p`
-        margin-bottom:2.813rem ;
+        --mb : ${(props) => props.mb};
+        margin-bottom:var(--mb,0);
+        align-self: center;
 `;
 
 export const DefaultSubreddit = styled.p`
