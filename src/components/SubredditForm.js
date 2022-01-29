@@ -33,7 +33,6 @@ export default function SubredditForm() {
         value={subreddit}
         onChange={handleChange}
         name="subreddit"
-        data-testid="subreddit-input"
       />
       <Button as="button" onClick={handleSubmit}>SEARCH</Button>
     </SubForm>

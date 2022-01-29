@@ -17,7 +17,7 @@ describe('Subreddit Form', () => {
         </MemoryRouter>
       </ThemeProvider>,
     );
-    const inputField = screen.getByTestId('subreddit-input');
+    const inputField = screen.getByPlaceholderText(/subreddit/i);
     expect(inputField).toHaveValue('javascript');
   });
 
@@ -29,7 +29,7 @@ describe('Subreddit Form', () => {
         </MemoryRouter>
       </ThemeProvider>,
     );
-    const inputField = screen.getByTestId('subreddit-input');
+    const inputField = screen.getByPlaceholderText(/subreddit/i);
     const searchBtn = screen.getByRole('button', { name: /search/i });
     userEvent.clear(inputField);
     userEvent.type(inputField, 'reactJS');
