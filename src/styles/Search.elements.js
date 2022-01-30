@@ -13,3 +13,6 @@ export const Input = styled.input`
     border-radius: 4px;
     padding:10px;
 `;
+export const LoadingIndicator = styled.img`
+    margin-top:30px; 
+ `;
