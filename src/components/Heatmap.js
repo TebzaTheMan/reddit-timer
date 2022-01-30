@@ -4,7 +4,8 @@ import {
 } from 'react-router-dom';
 import { useFetchPosts } from '../hooks/useFetchPosts';
 import Spinner from '../assets/loading.gif';
-import { LoadingIndicator } from '../styles/Search.elements';
+// eslint-disable-next-line no-unused-vars
+import { ErrorText, LoadingIndicator } from '../styles/Heatmap.elements';
 
 export default function Heatmap() {
   const { subreddit } = useParams();
@@ -14,15 +15,17 @@ export default function Heatmap() {
     return <LoadingIndicator src={Spinner} alt="loading posts..." />;
   }
   if (error) {
-    return <p>{error}</p>;
-  }
-  if (posts) {
     return (
-      <div>
-        number of posts:
-        {' '}
-        {posts.length}
-      </div>
+      <ErrorText>
+        {error}
+      </ErrorText>
     );
   }
+  return (
+    <div>
+      number of posts:
+      {' '}
+      {posts.length}
+    </div>
+  );
 }
